@@ -1,0 +1,33 @@
+{
+  "name": "crude-api-using-node-sequelize-postgres-and-docker",
+  "version": "1.0.0",
+  "description": "in this project, we will build a CRUD node Api with Sequelize, Postgres and Docker",
+  "main": "server.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "y": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kizadek/crude-api-using-node-sequelize-postgres-and-Docker.git"
+  },
+  "keywords": [
+    "dev"
+  ],
+  "author": "Mupela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kizadek/crude-api-using-node-sequelize-postgres-and-Docker/issues"
+  },
+  "homepage": "https://github.com/kizadek/crude-api-using-node-sequelize-postgres-and-Docker#readme"
+}

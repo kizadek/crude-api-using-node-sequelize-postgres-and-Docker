@@ -1,0 +1,5 @@
+# dote# dotenv environment variables filenv environment variables file
+app/config
+
+#other files 
+node_modules
