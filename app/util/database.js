@@ -2,9 +2,10 @@ const Sequelize = require('sequelize');
 
 //GET ENV VARIABLES FROM
 const sequelize = new Sequelize('Users', 'postgres', 'pass104', {
-    port:5433,
     host: 'localhost',
-    dialect: 'postgres' 
+    port:5433,
+    dialect: 'postgres' ,
+    logging: false
   });
 
 module.exports = sequelize;
