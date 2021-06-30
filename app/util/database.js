@@ -1,19 +1,10 @@
-const {Sequelize}= require('sequelize');
+const Sequelize = require('sequelize');
 
-exports. connectDB= async() =>{
-    const sequelize = new Sequelize('Users', 'postgres', 'pass104', {
-        host: 'localhost',
-        dialect: 'postgres' 
-      });
+//GET ENV VARIABLES FROM
+const sequelize = new Sequelize('Users', 'postgres', 'pass104', {
+    port:5433,
+    host: 'localhost',
+    dialect: 'postgres' 
+  });
 
-    try {
-        await sequelize.authenticate();
-        console.log('Connection has been established successfully');
-    } catch (error) {
-        console.log('unable to connect to the database:::' ,error)
-    }
-}
- 
-
-
-
+module.exports = sequelize;

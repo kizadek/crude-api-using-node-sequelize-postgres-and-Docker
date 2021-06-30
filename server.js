@@ -1,14 +1,13 @@
 const express = require("express");
 const morgan = require("morgan");
-const {connectDB} = require('./app/util/database');
 require("colors");
 
 
-
-connectDB();
 // initializing express app
 const app = express();
-const PORT = process.env.PORT || 5000
+
+const sequelize = require('./app/util/database');
+const PORT = process.env.PORT || 6000
 
 // Bodyparser
 app.use(express.json());
@@ -28,7 +27,18 @@ app.use(morgan('dev'))
 app.use('/dev',require('./app/routes/dev')) // All test routes 
 app.use('/users',require('./app/routes/users')) // USER CRUD
 
+(async()=>{
+    try {
 
-
+         sequelize.sync(
+             {force:false}
+         );
         app.listen(PORT,console.log(`server is runing on port::${PORT}`.cyan));
 
+    } catch (error) {
+        console.log('Error::',error)
+    }
+
+})();
+
+        
