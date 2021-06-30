@@ -1,11 +1,22 @@
 const Sequelize = require('sequelize');
-
+const dotenv = require('dotenv')
 //GET ENV VARIABLES FROM
-const sequelize = new Sequelize('Users', 'postgres', 'pass104', {
-    host: 'localhost',
-    port:5433,
-    dialect: 'postgres' ,
-    logging: false
-  });
+dotenv.config({path:"./app/config/config.env"})
 
-module.exports = sequelize;
+console.log('this is the password'+ process.env.DB_PASSWORD);
+
+const db = new Sequelize('Users', 'postgres',process.env.DB_PASSWORD,{
+   host: 'localhost',
+   port: process.env.DB_PORT,
+   dialect: 'postgres',
+
+   pool:{
+     max:5,
+     min:0,
+     acquire:30000,
+     idle:10000
+   }
+});
+
+
+ module.exports = db;

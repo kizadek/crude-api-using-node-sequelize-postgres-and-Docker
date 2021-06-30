@@ -25,10 +25,11 @@ GET http://localhost:5000/dev/seq
       "name":"Mupela Nsowa",
       "email":"mupelansowa404@gmail.com"
   }
-###
 
-  PUT http://localhost:5000/users/1
+###
+  PUT  http://localhost:5000/users/1
   content-type: application/json
+  
   {
       "name":"Mupela Nsowa",
       "email":"mupelansowa404@gmail.com"
