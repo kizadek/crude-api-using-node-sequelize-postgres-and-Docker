@@ -3,8 +3,6 @@ const dotenv = require('dotenv')
 //GET ENV VARIABLES FROM
 dotenv.config({path:"./app/config/config.env"})
 
-console.log('this is the password'+ process.env.DB_PASSWORD);
-
 const db = new Sequelize('Users', 'postgres',process.env.DB_PASSWORD,{
    host: 'localhost',
    port: process.env.DB_PORT,

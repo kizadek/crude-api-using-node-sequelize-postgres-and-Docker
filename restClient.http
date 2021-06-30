@@ -22,8 +22,10 @@ GET http://localhost:5000/dev/seq
   content-type: application/json
   
   {
-      "name":"Mupela Nsowa",
-      "email":"mupelansowa404@gmail.com"
+      "username":"Mupela Nsowa",
+      "age": 25,
+      "email":"mupelansowa404@gmail.com",
+      "password": "1234567"
   }
 
 ###
